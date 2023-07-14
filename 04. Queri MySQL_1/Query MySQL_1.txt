@@ -1,0 +1,23 @@
+SHORTCUT KEYBOARD TO RUNNING -> CTRL + ENTER
+
+SELECT * FROM `katalog`
+menampilkan semua kolom yang berada pada tabel katalog.
+SELECT * FROM `obat`
+menampilkan semua kolom yang berada pada tabel obat.
+SELECT * FROM `supply`
+menampilkan semua kolom yang berada pada tabel supply.
+SELECT * FROM `transaksi`
+menampilkan semua kolom yang berada pada tabel transaksi.
+
+SELECT jenis FROM `katalog`
+menampilkan kolom jenis yang berada pada tabel katalog.
+SELECT exp, no_katalog FROM `obat`
+menampilkan kolom exp dan no katalog yang berada pada tabel obat.
+SELECT barang_masuk, barang_keluar FROM `supply`
+menampilkan kolom barang masuk dan barang keluar pada tabel supply.
+SELECT tanggal_transaksi FROM `transaksi`
+menampilkan kolom tanggal transaksi yang berada pada tabel transaksi.
+
+SELECT * FROM `transaksi` WHERE total_harga_barang >= 20000
+menampilkan kolom total harga barang pada tabel transaksi dengan nilai 20000 hingga lebih.
+dengan begitu, nilai yang berada pada kurang dari 20000 tidak ditampilkan.
