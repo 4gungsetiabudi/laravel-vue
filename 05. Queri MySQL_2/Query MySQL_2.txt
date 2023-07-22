@@ -1,0 +1,33 @@
+
+- SELECT * FROM `katalog` ORDER BY jenis DESC; 
+Menampilkan data di tabel katalog pada kolom jenis dari yang terbesar hingga terkecil
+
+- SELECT * FROM `katalog` ORDER BY supply ASC; 
+Menampilkan data di tabel katalog pada kolom supply dari yang terkecil hingga terbesar
+
+- SELECT * FROM `katalog` WHERE jenis LIKE '%Paracetamol%'; 
+Mencari kata Paracetamol pada tabel katalog di kolom jenis
+
+- SELECT * FROM `katalog` WHERE jenis LIKE '%Asam%'
+Mencari kata Asam pada tabel katalog di kolom jenis
+
+- SELECT jenis, SUM(supply) as total FROM `katalog` GROUP BY jenis; 
+Mengelompokkan kolom jenis pada tabel katalog dan menjumlahkan di kolom supply
+
+- SELECT jenis, SUM(no_katalog) as total FROM `obat` GROUP BY jenis;
+Mengelompokkan kolom jenis pada tabel obat dan menjumlahkan di kolom no_katalog
+
+- SELECT tanggal_transaksi, SUM(jumlah_barang) as total FROM `transaksi` GROUP BY tanggal_transaksi;
+Mengelompokkan kolom tanggaltransaksi pada tabel transaksi dan menjumlahkan di kolom jumlah barang
+
+- SELECT barang_masuk, SUM(stok_barang) as total FROM `supply` GROUP BY barang_masuk;
+Mengelompokkan kolom barang masuk pada tabel supply dan menjumlahkan di kolom stok barang
+
+- SELECT barang_masuk, SUM(stok_barang) as total FROM `supply` WHERE barang_masuk >= 2023-07-01 GROUP BY barang_masuk ORDER BY barang_masuk DESC
+Mengelompokkan kolom barang masuk pada tabel supply dan menjumlahkan kolom stok barang serta hanya menampilkan data barang masuk yang hanya ditunjukan pada tanggal lebih dari 2023-07-01 dan dimulai dari urutan terbesar hingga terkecil
+
+- SELECT barang_masuk, SUM(stok_barang) as total FROM `supply` GROUP BY barang_masuk ORDER BY barang_masuk ASC;
+Mengelompokkan kolom barang masuk pada tabel supply dan menjumlahkan di kolom stok barang dan mengurutkan barang masuk hingga dari tekecil hingga terbesar
+
+- SELECT barang_masuk, SUM(stok_barang) as total FROM `supply` GROUP BY barang_masuk ORDER BY barang_masuk DESC;
+Mengelompokkan kolom barang masuk pada tabel supply dan menjumlahkan di kolom stok barang dan mengurutkan barang masuk hingga dari terbesar ke terkecil
