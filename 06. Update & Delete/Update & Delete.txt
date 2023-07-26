@@ -1,0 +1,15 @@
+UPDATE `katalog` SET `jenis`= 'Obat FLu' WHERE  Nama = 'Ultraflu'
+(Mengubah kata paracetamol menjadi obat flu pada kolom jenis di tabel katalog di baris Ultraflu)
+
+UPDATE `katalog` SET `jenis`= 'Obat sakit gigi' WHERE  Nama = 'Ponstan'
+(Mengubah kata paracetamol menjadi obat sakit gigi pada kolom jenis di tabel katalog di baris Ponstan)
+
+DELETE FROM `katalog` WHERE Nama = 'Promag'
+(Menghapus data di baris Promag yang berada pada tabel katalog)
+
+DELETE FROM `katalog` WHERE Nama = 'Bodrex'
+(Menghapus data di baris Bodrex yang berada pada tabel katalog)
+
+DELETE FROM `katalog` WHERE jenis = 'Guaifenesin'
+(Menghapus data di baris Konidin yang berada pada tabel katalog)
+
