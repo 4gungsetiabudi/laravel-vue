@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Event Handling Vue.JS</title>
+    </head>
+
+    <body>
+        <div id="example-1">
+            <button v-on:click="counter--">Kurangi 1</button>
+            <button v-on:click="counter += 1">Tambah 1</button>
+            <p>Nilai akan berubah setiap anda menekan tombol di atas {{ counter }} .</p>
+        </div>
+
+        <div id="example-2">
+            <!-- `abrakadabra` is the name of a method defined below -->
+            <button v-on:click="abrakadabra">Beri Salam</button> 
+        </div>
+        <br>
+        <div id="example-3">
+            <button v-on:click="ucapkan('hay')">Ucapkan hay</button>
+            <button v-on:click="ucapkan('apa')">Ucapkan apa</button>
+            <button v-on:click="ucapkan('uyeh')">Ucapkan uyeh</button>
+            <button v-on:click="ucapkan('BERCANDYAAA')">Ucapkan bercanda</button>
+        </div>
+        <br>
+        <div id="example-4">
+            <button v-on:click="warning('❌❌❌❌❌', $event)">
+                Kirim
+              </button>
+        </div>
+       
+
+    </body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script type="text/javascript">
+    var example1 = new Vue({
+        el: '#example-1',
+        data: {
+            counter: 45-1-2-3-4-5-6-7-8-9
+        }
+    })
+
+    var example2 = new Vue({
+        el: '#example-2',
+        data: {
+            name: 'Tamvan'
+        },
+        
+        // define methods under the `methods` object
+        methods: {
+            abrakadabra: function (event) {
+            // `this` inside methods points to the Vue instance
+            alert('Halo ' + this.name + '!')
+            // `event` is the native DOM event
+            if (event) {
+                alert(event.target.tagName)
+            }
+            }
+        }
+    })
+
+    new Vue({
+        el: '#example-3',
+        methods: {
+            ucapkan: function (message) {
+            alert(message)
+            }
+         }
+    })
+</script>
+
+
+<script type="text/javascript">
+    new Vue({
+    el: '#example-4',
+    methods: {
+        warning: function (message, event) {
+            console.log(event);
+            if (event) {
+            event.preventDefault()
+            }
+            alert(message)
+        }
+  }
+})    
+</script>
